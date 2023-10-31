@@ -8,7 +8,7 @@ const Todolist = (props:any) => {
         <>
           <div className='todolist'>
           <li>{props.text}</li>
-          <button  onClick={()=>{
+          <button className='btn' onClick={()=>{
             props.onSelect(props.id)
           }}>X</button>
           </div>

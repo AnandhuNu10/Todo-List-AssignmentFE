@@ -1,15 +1,11 @@
 import axios from 'axios'
 import store from '../store'
-// const apiEndpoint= process.env.API_HOST
 const apiEndpoint = 'http://localhost:3003/'
-// 52.0.94.187 - Old
 
 const API = (
   method: string,
   url: string,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   data: any = {},
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   headers: any = {}
 ) => {
   const state = store.getState()
