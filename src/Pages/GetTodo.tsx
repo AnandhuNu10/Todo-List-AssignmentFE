@@ -9,7 +9,7 @@ interface Todo {
 
 const GetTodo = () => {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
-  const [todos, setTodos] = useState<Todo[]>([]); // Provide a type for todos
+  const [todos, setTodos] = useState<Todo[]>([]);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -50,7 +50,7 @@ const GetTodo = () => {
     const id = decodeToken(token || '');
 
     if (id) {
-      fetch(`http://localhost:3003/todos/update-todo-status/${todoId}`, {
+      fetch(`https://todo-list-assignment-fe.vercel.app/todos/update-todo-status/${todoId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -84,7 +84,7 @@ const GetTodo = () => {
 
     const id = decodeToken(token || '');
     if (id) {
-      fetch(`http://localhost:3003/todos/find-all-todo/${id.id}`)
+      fetch(`https://todo-list-assignment-fe.vercel.app/todos/find-all-todo/${id.id}`)
         .then((response) => response.json())
         .then((data: Todo[]) => {
           setTodos(data);
