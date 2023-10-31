@@ -50,7 +50,7 @@ const GetTodo = () => {
     const id = decodeToken(token || '');
 
     if (id) {
-      fetch(`https://todo-list-assignment-fe-rveh.vercel.app/todos/update-todo-status/${todoId}`, {
+      fetch(`http://localhost:3003/todos/update-todo-status/${todoId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -84,7 +84,7 @@ const GetTodo = () => {
 
     const id = decodeToken(token || '');
     if (id) {
-      fetch(`https://todo-list-assignment-fe-rveh.vercel.app/todos/find-all-todo/${id.id}`)
+      fetch(`http://localhost:3003/todos/find-all-todo/${id.id}`)
         .then((response) => response.json())
         .then((data: Todo[]) => {
           setTodos(data);

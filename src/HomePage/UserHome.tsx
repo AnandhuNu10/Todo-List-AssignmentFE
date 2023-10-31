@@ -25,7 +25,7 @@ const UserHome = () => {
     return (
         <div className="header">
           <Navbar user={name} />
-        
+        <div>
         <div>
         <ul className="border">
         <li
@@ -47,9 +47,9 @@ const UserHome = () => {
       </ul>
         {selected===1&&<GetTodo/>}
         </div>
-   
-    
         </div>
+     </div>
+       
       );
 }
 
