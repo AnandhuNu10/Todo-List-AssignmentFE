@@ -11,7 +11,7 @@ const AddTodo = () => {
     const [list, setList] = useState<string[]>([]);
     const [selectedOption, setSelectedOption] = useState<{ value: string; label: string; id: number } | null>(null);
     const [userOptions, setUserOptions] = useState<{ value: string; label: string, id: number }[]>([]);
-    const apiUrl = "http://localhost:3003/users/get-all-users"; 
+    const apiUrl = "https://todo-list-assignment-fe-rveh.vercel.app/users/get-all-users"; 
 
     const listOfItems = () => {
         setList((oldItem) => {
@@ -38,7 +38,7 @@ const AddTodo = () => {
                 todos: list,
             };
 
-            fetch(`http://localhost:3003/todos/create-todo/${selectedOption.id}`, {
+            fetch(`https://todo-list-assignment-fe-rveh.vercel.app/create-todo/${selectedOption.id}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
