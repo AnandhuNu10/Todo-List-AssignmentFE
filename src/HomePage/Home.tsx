@@ -46,7 +46,7 @@ const Home: React.FC = () => {
         </li>
       </ul>
 
-      {selected === 1 && <AddTodo />} {/* Show AddTodo only when tab 1 is selected */}
+      {selected === 1 && <AddTodo />} 
     </div>
   );
 };

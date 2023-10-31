@@ -3,11 +3,11 @@ import { useNavigate } from 'react-router-dom';
 
 interface User {
   username: string;
-  role?: string; // Make sure role is optional as it might not exist for all users
+  role?: string;
 }
 
 interface NavbarProps {
-  user: User | null; // Make user nullable to handle the case where no user is provided
+  user: User | null; 
 }
 
 const Navbar: FunctionComponent<NavbarProps> = ({ user }) => {

@@ -20,11 +20,10 @@ const GetTodo = () => {
   }, []);
 
   const handleTodoClick = (todoId: number) => {
-    // Find the clicked todo and toggle its "completed" status
     const updatedTodos = todos.map((todo) => {
       if (todo.id === todoId) {
         const updatedTodo = { ...todo, completed: !todo.completed };    
-        setTodoStatus(todoId, updatedTodo.completed); // Call the API to update todo status
+        setTodoStatus(todoId, updatedTodo.completed);
         return updatedTodo;
       }
       return todo;
@@ -68,7 +67,6 @@ const GetTodo = () => {
     }
   };
 
-  // Fetch todos from the API and set them in the state
   useEffect(() => {
     const token = localStorage.getItem('token');
     const decodeToken = (token: string) => {
@@ -95,7 +93,7 @@ const GetTodo = () => {
           console.error('Error fetching todos:', error);
         });
     }
-  }, []); // <- Make sure to close the useEffect with a closing parenthesis
+  }, []); 
 
   return (
     <div>

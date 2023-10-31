@@ -34,12 +34,10 @@ const AddTodo = () => {
 
     const saveTodos = () => {
         if (selectedOption) {
-            // Create a request body with the todos from the list
             const requestBody = {
                 todos: list,
             };
 
-            // Make an HTTP POST request to the API to save todos
             fetch(`http://localhost:3003/todos/create-todo/${selectedOption.id}`, {
                 method: 'POST',
                 headers: {
