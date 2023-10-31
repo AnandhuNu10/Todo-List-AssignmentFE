@@ -1,0 +1,62 @@
+.add-btn{
+    margin-left: 60%;
+}
+.date-time{
+    margin-left: 10%;
+}
+
+.select{
+    width: 55%;
+    margin-left: 20%;
+    margin-top: 2%;
+}
+.input>input{
+    width: 500px;
+    height: 25px;
+}
+.input>h3{
+    margin-left: 20%;
+}
+
+.input{
+    margin-left: 25%;  
+}
+
+.main-input{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.todolist{
+    display: flex;
+}
+.todolist > button{
+    margin-left: 1%;
+  
+    
+}
+
+.card{
+  
+    border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: #fff;
+  width: 30%;
+  height: auto;
+  margin: auto;
+    }
+
+.card h3{
+    display: flex   ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card ul li{
+    font-size: 1.3rem;
+}
