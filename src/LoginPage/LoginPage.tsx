@@ -21,7 +21,7 @@ const LoginPage: React.FC = () => {
   const handleLogin = async () => {
     try {
       const response = await axios.post<LoginResponse>(
-        'https://todo-list-assignment-fe.vercel.app/auth/login',
+        'http://localhost:3003/auth/login',
         {
           username,
           password,
