@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './styles.css';
 import Navbar from './Navbar';
 import AddTodo from '../Pages/AddTodo';
-import jwt from 'jsonwebtoken';
 
 const Home: React.FC = () => {
   const [selected, setSelected] = useState<number>(1);
@@ -45,7 +44,7 @@ const Home: React.FC = () => {
           List Of Todos
         </li>
       </ul>
-
+   
       {selected === 1 && <AddTodo />} 
     </div>
   );

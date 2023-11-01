@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Outlet, Route, Routes } from 'react-router-dom';
 import LoginPage from './LoginPage/LoginPage';
 import Home from './HomePage/Home';
 import ProtectedRoute from './ProtectedRoutes';
@@ -11,16 +11,15 @@ function App() {
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route>
-          <Route path="/home/admin" 
-          element={<ProtectedRoute>
-          <Home />
+          <Route path="/home/admin"
+            element={<ProtectedRoute>
+              <Home/>
             </ProtectedRoute>} />
-          <Route path="/home" 
-          element={<ProtectedRoute>
-          <UserHome />
-          </ProtectedRoute>} />
-          </Route>
-        
+          <Route path="/home"
+            element={<ProtectedRoute>
+              <UserHome/>
+            </ProtectedRoute>} />
+        </Route>
       </Routes>
     </div>
 
