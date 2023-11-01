@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import AddTodo from '../Pages/AddTodo';
 import Navbar from './Navbar';
 import GetTodo from '../Pages/GetTodo';
 
@@ -28,20 +27,20 @@ const UserHome = () => {
         <div>
         <div>
         <ul className="border">
-        <li
-          className={`lists ${selected === 1 ? 'black' : 'white'}`}
-          onClick={() => {
-            setSelected(1);
-          }}
-        >
-          All Todos
-        </li>
-        <li
-          className={`lists ${selected === 2 ? 'black' : 'white'}`}
-          onClick={() => {
-            setSelected(2);
-          }}
-        >
+              <li
+                className={`lists ${selected === 1 ? 'black' : 'white'}`}
+                onClick={() => {
+                  setSelected(1);
+                }}
+              >
+                All Todos
+              </li>
+              <li
+                className={`lists ${selected === 2 ? 'black' : 'white'}`}
+                onClick={() => {
+                  setSelected(2);
+                }}
+              >
           Pending Todos
         </li>
       </ul>

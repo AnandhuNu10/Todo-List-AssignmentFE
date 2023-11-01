@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 
 interface User {
   username: string;
@@ -7,7 +7,7 @@ interface User {
 }
 
 interface NavbarProps {
-  user: User | null; 
+  user: User | null;
 }
 
 const Navbar: FunctionComponent<NavbarProps> = ({ user }) => {
@@ -16,26 +16,26 @@ const Navbar: FunctionComponent<NavbarProps> = ({ user }) => {
       Welcome, {user.username}
       {user.role && ` (${user.role})`}
     </span>
-  ) :'welcome';
+  ) : 'welcome';
 
   const navigate = useNavigate();
 
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/");
+  };
 
   return (
     <nav className='nav-container'>
-      <div >
+      <div tabIndex={0} onKeyDown={handleLogout} role="button">
         <div className="navbar-user">{welcomeMessage}</div>
       </div>
-      <div >
-          <a
-            onClick={() => {
-              localStorage.removeItem("token");
-              navigate("/");
-            }}
-          >
-            <button>Logout</button>
-          </a>
-        </div>
+      <Outlet/>
+      <div>
+        <a onClick={handleLogout}>
+          <button>Logout</button>
+        </a>
+      </div>
     </nav>
   );
 };
