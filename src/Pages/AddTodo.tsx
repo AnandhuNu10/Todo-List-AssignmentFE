@@ -54,7 +54,7 @@ const AddTodo = () => {
                 })
                 .catch(error => console.error('Error saving todos:', error));
         } else {
-            console.error('Please select a user before saving todos.');
+            toast.error('Please select a user before saving Todos.');
         }
     }
 

@@ -8,8 +8,8 @@ import UserHome from './HomePage/UserHome';
 function App() {
   return (
     <div>
+            
             <Routes>
-
       <Route path="/" element={<LoginPage />} />
       <Route path="/home/admin" element={<ProtectedRoute>
         <Home />
