@@ -11,7 +11,7 @@ const AddTodo = () => {
     const [list, setList] = useState<string[]>([]);
     const [selectedOption, setSelectedOption] = useState<{ value: string; label: string; id: number } | null>(null);
     const [userOptions, setUserOptions] = useState<{ value: string; label: string, id: number }[]>([]);
-    const apiUrl = "http://localhost:3003/users/get-all-users"; // Replace with your API URL
+    const apiUrl = "http://localhost:3003/users/get-all-users"; 
 
     const listOfItems = () => {
         setList((oldItem) => {
@@ -47,11 +47,9 @@ const AddTodo = () => {
             })
                 .then(response => response.json())
                 .then(data => {
-                    // Handle the response as needed
                     console.log('Todos saved:', data);
                     toast.success("Todo saved succesfully");
 
-                    // Clear the list of todos after a successful response
                     setList([]);
                 })
                 .catch(error => console.error('Error saving todos:', error));

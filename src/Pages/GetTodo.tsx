@@ -9,7 +9,7 @@ interface Todo {
 
 const GetTodo = () => {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
-  const [todos, setTodos] = useState<Todo[]>([]); // Provide a type for todos
+  const [todos, setTodos] = useState<Todo[]>([]); 
 
   useEffect(() => {
     const intervalId = setInterval(() => {
