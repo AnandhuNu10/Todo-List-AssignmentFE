@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import AddTodo from '../components/AddTodo';
 
 const Home: React.FC = () => {
-  const [selected, setSelected] = useState<number>(1);
+  const [selected,setSelected] = useState<number>(1);
   const username = localStorage.getItem('token') || '';
 
   const decodeToken = (token: string) => {
@@ -12,6 +12,8 @@ const Home: React.FC = () => {
       const tokenParts = token.split('.');
       if (tokenParts.length === 3) {
         const payload = JSON.parse(atob(tokenParts[1]));
+        console.log(setSelected);
+        
         return payload; 
       }
     } catch (error) {
