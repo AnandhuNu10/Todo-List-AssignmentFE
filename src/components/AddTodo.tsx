@@ -10,7 +10,7 @@ const AddTodo = () => {
     const [list, setList] = useState<string[]>([]);
     const [selectedOption, setSelectedOption] = useState<{ value: string; label: string; id: number } | null>(null);
     const [userOptions, setUserOptions] = useState<{ value: string; label: string, id: number }[]>([]);
-    const apiUrl = "http://localhost:3003/users/get-all-users"; 
+    const apiUrl = "http://localhost:3003/api/users/get-all-users"; 
 
     const listOfItems = () => {
         setList((oldItem) => {
@@ -37,7 +37,7 @@ const AddTodo = () => {
                 todos: list,
             };
 
-            fetch(`http://localhost:3003/todos/create-todo/${selectedOption.id}`, {
+            fetch(`http://localhost:3003/api/todos/create-todo/${selectedOption.id}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

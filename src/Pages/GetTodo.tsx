@@ -42,7 +42,7 @@ const GetTodo = () => {
     const id = decodeToken(token || '');
 
     if (id) {
-      fetch(`http://localhost:3003/todos/update-todo-status/${todoId}`, {
+      fetch(`http://localhost:3003/api/todos/update-todo-status/${todoId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ const GetTodo = () => {
 
     const id = decodeToken(token || '');
     if (id) {
-      fetch(`http://localhost:3003/todos/find-all-todo/${id.id}`)
+      fetch(`http://localhost:3003/api/todos/find-all-todo/${id.id}`)
         .then((response) => response.json())
         .then((data: Todo[]) => {
           setTodos(data);
