@@ -3,10 +3,9 @@ import { Navigate } from "react-router-dom";
 
 const ProtectedRoute = (props: any) => {
   const token = localStorage.getItem("token");
-  if (token == undefined) {
+  if (token === undefined) {
     return <Navigate to="/"></Navigate>;
   }
-
   return props.children;
 };
 
