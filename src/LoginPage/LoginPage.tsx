@@ -86,35 +86,26 @@ const LoginPage: React.FC = () => {
 
   return (
     
-    <div className="App">
-      <div>
-        <h1>Login Page</h1>
-        <form>
-          <label>
-            Username:
-            <input
-              type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </label>
-          <br />
-          <label>
-            Password:
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </label>
-          <br />
-
-          <button type="button" onClick={handleLogin}>
-            Login
-          </button>
-        </form>
+    <div className="login-container">
+      <div className="login-box">
+        <h2>Login</h2>
+        <input
+          className='login-input'
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        <span></span>
+        <input
+          className='login-input'
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button className='login-btn' onClick={handleLogin}>Login</button>
       </div>
-      <ToastContainer position="top-right" autoClose={3000} />
     </div>
   );
 };

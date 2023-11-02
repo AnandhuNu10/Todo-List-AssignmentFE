@@ -15,7 +15,11 @@
     height: 25px;
 }
 .input>h3{
-    margin-left: 20%;
+    margin-left: 22%;
+}
+
+.input button{
+    margin-left: 25px;
 }
 
 .input{
@@ -26,9 +30,12 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
-    
+    margin-top: 50px;   
 }
+
+/* .input input{
+    width: 50%;
+} */
 
 .todolist{
     display: flex;
@@ -50,6 +57,7 @@
   width: 30%;
   height: auto;
   margin: auto;
+  margin-top: 3%;
     }
 
 .card h3{
@@ -61,4 +69,8 @@
 
 .card ul li{
     font-size: 1.3rem;
+}
+
+.get-todo{
+    padding: 10px;
 }

@@ -11,14 +11,6 @@ const GetTodo = () => {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
   const [todos, setTodos] = useState<Todo[]>([]); 
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentDateTime(new Date());
-    }, 1000);
-
-    return () => clearInterval(intervalId);
-  }, []);
-
   const handleTodoClick = (todoId: number) => {
     const updatedTodos = todos.map((todo) => {
       if (todo.id === todoId) {
@@ -97,9 +89,6 @@ const GetTodo = () => {
 
   return (
     <div>
-      <div className="date-time">
-        <strong>{currentDateTime.toLocaleString()}</strong>
-      </div>
       <div className="card">
         <h3>Your Todos</h3>
         <ul>

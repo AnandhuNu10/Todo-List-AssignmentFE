@@ -26,24 +26,10 @@ const UserHome = () => {
           <Navbar user={name} />
         <div>
         <div>
-        <ul className="border">
-              <li
-                className={`lists ${selected === 1 ? 'black' : 'white'}`}
-                onClick={() => {
-                  setSelected(1);
-                }}
-              >
-                All Todos
-              </li>
-              <li
-                className={`lists ${selected === 2 ? 'black' : 'white'}`}
-                onClick={() => {
-                  setSelected(2);
-                }}
-              >
-          Pending Todos
-        </li>
-      </ul>
+        <div className='all-todos'>
+          <h2>All Todos</h2>
+        </div>
+              
         {selected===1&&<GetTodo/>}
         </div>
         </div>

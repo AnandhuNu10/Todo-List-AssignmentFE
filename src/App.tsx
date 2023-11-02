@@ -1,4 +1,4 @@
-import { Outlet, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import LoginPage from './LoginPage/LoginPage';
 import Home from './HomePage/Home';
 import ProtectedRoute from './ProtectedRoutes';

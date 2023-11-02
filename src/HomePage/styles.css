@@ -1,9 +1,21 @@
 .nav-container{
-  padding: 20px;
+  padding:15px;
   display: flex;
   justify-content: space-between;
-  background-color: aliceblue;
+  background-color: rgb(183, 228, 247);
 
+}
+
+.navbar-user{
+  margin-top: 10px;
+}
+
+.add-todos{
+margin-left: 41%;
+}
+
+.all-todos{
+  margin-left: 46%;
 }
 
 .border {
@@ -11,13 +23,13 @@
   height: 28px;
   border-radius: 3px;
   padding: 0px;
-  width: 80%;
+  width: 75%;
   align-items: center;
   font-weight: 500;
   display: flex;
   list-style-type: none;
-  justify-content: space-evenly;
-  margin-left: 10%;
+  justify-content: center;
+  margin-left: 12%;
 }
 
 .lists {
@@ -44,6 +56,10 @@
 }
 
 .btn-save{
-  margin-left: 25%;
+  margin-left: 22%;
   justify-content: center;
+}
+
+.select-role{
+  width: 100%;
 }

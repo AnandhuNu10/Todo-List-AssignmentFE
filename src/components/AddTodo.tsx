@@ -6,7 +6,6 @@ import { toast } from "react-toastify";
 
 
 const AddTodo = () => {
-    const [currentDateTime, setCurrentDateTime] = useState(new Date());
     const [inputList, setInputList] = useState('');
     const [list, setList] = useState<string[]>([]);
     const [selectedOption, setSelectedOption] = useState<{ value: string; label: string; id: number } | null>(null);
@@ -58,13 +57,6 @@ const AddTodo = () => {
         }
     }
 
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            setCurrentDateTime(new Date());
-        }, 1000);
-
-        return () => clearInterval(intervalId);
-    }, []);
 
     useEffect(() => {
         fetch(apiUrl)
@@ -88,9 +80,6 @@ const AddTodo = () => {
 
     return (
         <div>
-            <div className='date-time'>
-                <strong>{currentDateTime.toLocaleString()}</strong>
-            </div>
 
             <div className='main-input'>
                 <div className='select'>
@@ -112,9 +101,13 @@ const AddTodo = () => {
                     />
                 </div>
                 <div className='input'>
+                    
                     <h3>Enter Todos</h3>
-                    <input type='text' placeholder='Add Todo' value={inputList} onChange={itemEvent} />
+                    <input type='text' placeholder='Add Todo' style={{marginLeft:"90px"}} value={inputList} onChange={itemEvent} />
                     <button type='submit' onClick={listOfItems}>+</button>
+                    
+                    
+                    
                     <ol>
                     {list.map((item,index)=>{
             return <Todolist key={index} id={index} text = {item} onSelect={deleteItems} />

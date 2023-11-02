@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './styles.css';
 import Navbar from './Navbar';
-import AddTodo from '../Pages/AddTodo';
+import AddTodo from '../components/AddTodo';
 
 const Home: React.FC = () => {
   const [selected, setSelected] = useState<number>(1);
@@ -26,24 +26,9 @@ const Home: React.FC = () => {
     <div className="header">
       <Navbar user={name} />
 
-      <ul className="border">
-        <li
-          className={`lists ${selected === 1 ? 'black' : 'white'}`}
-          onClick={() => {
-            setSelected(1);
-          }}
-        >
-          Add Todos
-        </li>
-        <li
-          className={`lists ${selected === 2 ? 'black' : 'white'}`}
-          onClick={() => {
-            setSelected(2);
-          }}
-        >
-          List Of Todos
-        </li>
-      </ul>
+      <div className='add-todos'>
+        <h2>Add Todos</h2>
+      </div>
    
       {selected === 1 && <AddTodo />} 
     </div>
