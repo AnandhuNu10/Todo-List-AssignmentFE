@@ -8,6 +8,7 @@ interface Todo {
 }
 
 const GetTodo = () => {
+  const [currentDateTime, setCurrentDateTime] = useState(new Date());
   const [todos, setTodos] = useState<Todo[]>([]); 
 
   const handleTodoClick = (todoId: number) => {

@@ -1,9 +1,11 @@
+import React, { useState } from 'react'
 import Navbar from './Navbar';
 import GetTodo from '../Pages/GetTodo';
 
 const UserHome = () => {
 
     const username = localStorage.getItem('token') || '';
+    const [selected, setSelected] = useState<number>(1);
 
     const decodeToken = (token: string) => {
       try {
@@ -28,7 +30,7 @@ const UserHome = () => {
           <h2>All Todos</h2>
         </div>
               
-        <GetTodo/>
+        {selected===1&&<GetTodo/>}
         </div>
         </div>
      </div>
