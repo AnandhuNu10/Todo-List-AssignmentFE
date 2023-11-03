@@ -77,7 +77,7 @@ const AddTodo = () => {
                 }
             })
             .catch(error => console.error('Error fetching user data:', error));
-    }, [apiUrl]);
+    },[]);
 
     return (
         <div>

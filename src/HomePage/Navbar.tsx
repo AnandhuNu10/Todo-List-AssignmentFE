@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { Outlet, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 interface User {
   username: string;
@@ -31,9 +31,7 @@ const Navbar: FunctionComponent<NavbarProps> = ({ user }) => {
         <div className="navbar-user">{welcomeMessage}</div>
       </div>
       <div>
-        <a onClick={handleLogout}>
-          <button>Logout</button>
-        </a>
+        <button onClick={handleLogout}>Logout</button>
       </div>
     </nav>
   );
