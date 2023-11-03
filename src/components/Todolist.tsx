@@ -6,12 +6,12 @@ const Todolist = (props:any) => {
     
     return (
         <>
-        <div className='todolist'>
+          <div className='todolist'>
           <li>{props.text}</li>
-          <button className='btn' onClick={() => {
+          <button className='btn' onClick={()=>{
             props.onSelect(props.id)
           }}>X</button>
-        </div>
+          </div>
         </>
     )
 }

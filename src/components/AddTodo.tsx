@@ -10,7 +10,7 @@ const AddTodo = () => {
     const [list, setList] = useState<string[]>([]);
     const [selectedOption, setSelectedOption] = useState<{ value: string; label: string; id: number } | null>(null);
     const [userOptions, setUserOptions] = useState<{ value: string; label: string, id: number }[]>([]);
-    const apiUrl = "http://localhost:3003/api/users/get-all-users"; 
+    const apiUrl = "http://65.2.184.70:3003/api/users/get-all-users"; 
 
     const listOfItems = () => {
         setList((oldItem) => {
@@ -21,7 +21,7 @@ const AddTodo = () => {
 
     const deleteItems = (id: any) => {
         setList((oldItem) => {
-            return oldItem.filter((index) => {
+            return oldItem.filter((array, index) => {
                 return index !== id;
             });
         });
@@ -109,7 +109,7 @@ const AddTodo = () => {
                     
                     
                     
-                    <ol>
+                    <ol style={{marginLeft:"10%"}}>
                     {list.map((item,index)=>{
             return <Todolist key={index} id={index} text = {item} onSelect={deleteItems} />
         })}
