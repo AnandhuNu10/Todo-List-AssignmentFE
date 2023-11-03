@@ -21,7 +21,7 @@ const AddTodo = () => {
 
     const deleteItems = (id: any) => {
         setList((oldItem) => {
-            return oldItem.filter((array, index) => {
+            return oldItem.filter((index) => {
                 return index !== id;
             });
         });
