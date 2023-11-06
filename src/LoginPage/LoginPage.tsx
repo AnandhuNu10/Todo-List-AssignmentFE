@@ -24,7 +24,7 @@ const LoginPage: React.FC = () => {
         'http://65.2.184.70:3003/api/auth/login',
         {
           username,
-          password,
+          password, 
         }
       );
 

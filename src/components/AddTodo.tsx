@@ -37,7 +37,7 @@ const AddTodo = () => {
                 todos: list,
             };
 
-            fetch(`http://localhost:3003/api/todos/create-todo/${selectedOption.id}`, {
+            fetch(`http://65.2.184.70:3003/api/todos/create-todo/${selectedOption.id}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
